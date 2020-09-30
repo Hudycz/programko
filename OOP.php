@@ -40,20 +40,20 @@ class Hudák {
 
 } 
 var_dump ($instance);
-$cisla = new Chyska();
-$cisla-> getneco1('15');
-echo $cisla-> getneco1();
+$cisla = new Hudák();
+$cisla-> getcar1('15');
+echo $cisla-> getcar1();
 echo '<br>';
-$cisla-> getneco2('4');
-echo $cisla-> getneco2();
+$cisla-> getcar2('4');
+echo $cisla-> getcar2();
 echo '<br>';
-$cisla-> getneco3('45');
-echo $cisla-> getneco3();
+$cisla-> getcar3('45');
+echo $cisla-> getcar3();
 echo '<br>';
-$cisla-> getneco4('13');
-echo $cisla-> getneco4();
+$cisla-> getcar4('13');
+echo $cisla-> getcar4();
 echo '<br>';
-$cisla-> getneco5('24');
-echo $cisla-> getneco5();
+$cisla-> getcar5('24');
+echo $cisla-> getcar5();
 ?>;
 
