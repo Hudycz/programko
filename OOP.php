@@ -1,18 +1,18 @@
 <?php
  $instance = new Hudák;
-class Hudák {
-    public $car1 = 15; 
+class Hudák {//definice class Hudák
+    public $car1 = 15; //definice typu funkce
     public $car2 = 4;
     public $car3 = 45;
     public $car4 = 13;
     public $car5 = 24 ;
-    protected $car6 = 26;
+    protected $car6 = 26;//definice chranene funkce
     protected $car7 = 31; 
     protected $car8 = 36;
-    private $car9 = 189;
+    private $car9 = 189;//definice privatni funkce
     private $car10 = 65;
 
-    public function getcar1 () {
+    public function getcar1 () {//definice verejne funkce
        return $this-> car1;
     }
     public function getcar2 () {
@@ -39,10 +39,10 @@ class Hudák {
     }
 
 } 
-var_dump ($instance);
+var_dump ($instance);//vypise hodnoty
 $cisla = new Hudák();
 $cisla-> getcar1('15');
-echo $cisla-> getcar1();
+echo $cisla-> getcar1();//vypise hodnotu getcar1
 echo '<br>';
 $cisla-> getcar2('4');
 echo $cisla-> getcar2();
