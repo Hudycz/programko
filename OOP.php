@@ -1,59 +1,88 @@
 <?php
- $instance = new Hudák;
-class Hudák {//definice class Hudák
-    public $car1 = 15; //definice typu funkce
-    public $car2 = 4;
-    public $car3 = 45;
-    public $car4 = 13;
-    public $car5 = 24 ;
-    protected $car6 = 26;//definice chranene funkce
-    protected $car7 = 31; 
-    protected $car8 = 36;
-    private $car9 = 189;//definice privatni funkce
-    private $car10 = 65;
+declare (strict_types = 1);
+namespace Hudák;
+final class UserHudák {
+    /** Vrátí zvuk
+     * @author Petr Hudák
+     * @param string $zvuk
+     * @return string
+     */
+    public function reproduktor(string $zvuk): string {
+        $reproduktor_zvuk = $this->ts->reproduktor($zvuk);
+        /**
+         * komentar
+         * nebo viceradkovy
+         */
+        return $reproduktor_zvuk;
+    }
+    private $username = 'petko';
+    private $password = '1334';
+    protected $firstName = 'Petr';
+    protected $lastName = 'Hudák';
+    protected $phone = 123456789;
+    public $street = 'Imrychova 885';
+    public $zip = 14300; // psc
+    public $invoiceId = 0123574112; // ico
+    public $loginCount = 0;
+    public $bornDate = 2001;
+    public function __construct() {
+    }
+    /**
+     * komentar
+     * @param string $username
+     */
+    function setUsernameHudák(string $username) {
+        $this->username = $username;
+    }
+    /**
+     * komentar
+     * @param string $password
+     */
+    function setPasswordHudák(string $password) {
+        $this->password = $password;
+    }
+    /**
+     * komentar
+     * @return string
+     */
+    function getStreetHudák(): string {
+        return $this->street;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getZipHudák(): int {
+        return $this->zip;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getInvoiceIdHudák(): int {
+        return $this->invoiceId;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getLoginCountHudák(): int {
+        return $this->loginCount;
+    }
+    /**
+     * komentar
+     * @return int
+     */
+    function getBornDateHudák(): int {
+        return $this->bornDate;
+    }
+}
+$petko = new UserHudák;
+$petko->setUsernameHudák("Petr");
+echo $petko->getStreetHudák();
+echo $petko->getZipHudák();
+echo $petko->getInvoiceIdHudák();
+echo $petko->getLoginCountHudák();
+echo $petko->getBornDateHudák();
 
-    public function getcar1 () {//definice verejne funkce
-       return $this-> car1;
-    }
-    public function getcar2 () {
-       return $this-> car2;
-    }
-    public function getcar3 () {
-       return $this-> car3;
-    }
-    public function getcar4 () {
-       return $this-> car4;
-    }
-    public function getcar5 () {
-       return $this-> car5;
-    }
-
-    private function setcar9 () {
-       return $this-> car9; 
-    }
-    private function setcar10 () {
-        return $this-> car10;
-    }
-    public function _construct () {
-
-    }
-
-} 
-var_dump ($instance);//vypise hodnoty
-$cisla = new Hudák();
-$cisla-> getcar1('15');
-echo $cisla-> getcar1();//vypise hodnotu getcar1
-echo '<br>';
-$cisla-> getcar2('4');
-echo $cisla-> getcar2();
-echo '<br>';
-$cisla-> getcar3('45');
-echo $cisla-> getcar3();
-echo '<br>';
-$cisla-> getcar4('13');
-echo $cisla-> getcar4();
-echo '<br>';
-$cisla-> getcar5('24');
-echo $cisla-> getcar5();
-?>;
-
+echo var_dump($petko);
